@@ -1,2 +1,2 @@
 # pushswap
-This is about applying a sorting algorithim
+This project is about applying a sorting algorithim
