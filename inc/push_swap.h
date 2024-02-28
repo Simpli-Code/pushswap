@@ -6,7 +6,7 @@
 /*   By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/25 10:41:02 by chruhin           #+#    #+#             */
-/*   Updated: 2023/06/21 12:23:19 by chruhin          ###   ########.fr       */
+/*   Updated: 2024/02/28 10:15:17 by chruhin          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <unistd.h>
 # include <stdlib.h>
+# define ERR	"\x1b[31mError\x1b[0m\n"
 
 typedef struct s_list
 {
@@ -32,6 +33,7 @@ int		is_empty_string(char argv[]);
 int		check_for_duplicates(int arr_size, int *array);
 int		is_array_sorted(int arr_size, int *array);
 int		ft_isspace(const char ch);
+size_t	ft_strlen(const char *s);
 
 int		create_list(int arr_size, int *array);
 int		ft_lstsize(t_list *lst);
