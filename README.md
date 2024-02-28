@@ -1,7 +1,9 @@
 # pushswap
 Here, I will briefly describe the algorithm that used for my push_swap project:
 
-In my implementation, I use a linked list for sorting the numbers and an integer array for filtering the numbers for validity, so the algorithm can also be implemented with  arrays, if you adapt this algorithm with some modifications. After filtering the input for validity (checking if the input are valid integers or there are no duplication) then I split and convert the input string into integers using my functions ft_split(); and ft_atoi(); then I store each value in a separate node in a singly linked lists (aka STACK A).  so now that I know the input are valid integers I can fill up my STACK A. The goal is to sort the input (which are numbers between MIN INT AND MAX INT) in ascending order into STACK A.
+In my implementation, I use a linked list for sorting the numbers and an integer array for filtering the numbers for validity, so the algorithm can also be implemented with  arrays, if you adapt this algorithm with some modifications. After filtering the input for validity (checking if the input are valid integers or there are no duplication) then I split and convert the input string into integers using my functions ft_split(); and ft_atoi(); then I store each value in a separate node in a singly linked lists (aka STACK A).
+
+The goal is to sort the input (which are numbers between MIN INT AND MAX INT) in ascending order into STACK A.
 
 To do so you have the following operations at your disposal:
 
@@ -43,6 +45,9 @@ The last element becomes the first one.
 
 rrr : rra and rrb at the same time.
 
+After filling up my STACK A with random numbers that I received as input I have the above instructions to sort my STACK A, so in order to achive that I create another stack which will be STACK B. 
+
+
 # 🛠️ Usage
 Requirements
 
@@ -56,7 +61,7 @@ $ make
 
 Executing the program
 
-$ ./push_swap "34562 -534093 2 -6" 99 -234243 644
+$ ./push_swap "5 -9 2 -1" 99 -42 6
 
 # 📑 Index
 @root
