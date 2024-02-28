@@ -1,7 +1,7 @@
 # pushswap
 Here, I will briefly describe the algorithm that used for my push_swap project:
 
-In my implementation, I use a linked list for sorting the numbers and an integer array for filtering the numbers for validity, so the algorithm can also be implemented with  arrays, if you adapt this algorithm with some modifications. After filtering the input for validity (checking if the input are valid integers or there are no duplication or the input is sorted (numbers are in ascending orders)) then I split and convert the input string into integers using my functions ft_split(); and ft_atoi(); then I store each value in a separate node in a singly linked lists (aka STACK A).
+In my implementation, I use a linked list for sorting the numbers and an integer array for filtering the numbers for validity, so the algorithm can also be implemented with  arrays, if you adapt this algorithm with some modifications. After filtering the input for validity (checking if the input are valid integers or there are no duplication or the input is not sorted (numbers are not in ascending orders)) then I split and convert the input string into integers using my functions ft_split(); and ft_atoi(); then I store each value in a separate node in a singly linked lists (aka STACK A).
 
 The goal is to sort the input (which are numbers between MIN INT AND MAX INT) in ascending order into STACK A.
 
