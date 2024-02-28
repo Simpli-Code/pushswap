@@ -58,12 +58,15 @@ So the following method will remain the same as long as the stack size is bigger
 We set first a counter variable i to 0, and the chunk which we will call limit variable depending on the stack size either to 15 or 30, and then loop through each elements of our STACK A and check for the following 3 conditions:
 
 1. if the current element's index is smaller or equal to i
+   
       push the current element to STACK B and rotate it in STACK B and increment i value
 
 3. if the current element's index is smaller or equal to i plus limit
+
       push the current element to STACK B and increment i value
 
-5. if none of the previous conditions were true 
+5. if none of the previous conditions were true
+
       rotate the current element in STACK A
    
 When the loop reaches the end of STACK A, it means all the elements are pushed and presorted to STACK B, so now we proceed with the sorting in STACK B. 
@@ -71,11 +74,16 @@ When the loop reaches the end of STACK A, it means all the elements are pushed a
 We set first 3 integer variable biggest, half and position, and then simply loop through each elements of STACK B and check for the following 3 conditions:
 
 1. if the current element's index is equal to to the biggest element
-         push the current element to STACK A and decrease the variable biggest
+
+      push the current element to STACK A and decrease the variable biggest
+
 3. if the current element's positon is in the lower half of STACK B and it is not the biggest element
-         rotate the current element in STACK B
+
+      rotate the current element in STACK B
+
 5. if the current element's position is in the upper half of the STACK B and it is not the biggest element
-         reverse rotate the current element in STACK B
+
+      reverse rotate the current element in STACK B
 
 After this loop reaches the end every element will be pushed and sorted in STACK A.
 
