@@ -97,11 +97,15 @@ Instructions
 
 Compiling the program
 
+```
 $ make
+```
 
 Executing the program
 
+```
 $ ./push_swap "5 -9 2 -1" 99 -42 6
+```
 
 # 📑 Index
 @root
