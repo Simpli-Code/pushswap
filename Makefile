@@ -6,21 +6,17 @@
 #    By: chruhin <chruhin@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/25 10:38:30 by chruhin           #+#    #+#              #
-#    Updated: 2024/02/28 08:26:28 by chruhin          ###   ########.fr        #
+#    Updated: 2024/03/07 11:31:38 by chruhin          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 # Program name
 NAME				=		push_swap
 
-# color codes
-GRN					=		\001\033[1;92m\002
-RST					=		\001\033[0m\002
-
 # Directories
 SRC_DIR				=		src
 OBJ_DIR				=		obj
-INC_DIR				=		-I ./inc
+INC_DIR				=		inc
 
 # Source files
 DIRS				=		utils filtering sorting main
@@ -51,19 +47,26 @@ $(OBJ_DIR)/%.o:				$(SRC_DIR)/%.c
 
 # Compiling exec
 $(NAME): 					$(OBJS)
-							@$(CC) $(CFLAGS) -o $(NAME) $(OBJS) -lreadline
+							@$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
 							@printf "${GRN}Compiled successfuly${RST}\n"
 
 # Remove object files
 clean:
-							$(RM) $(OBJ_DIR)
+							@$(RM) $(OBJ_DIR)
+							@printf "${RED}Deleted Object files${RST}\n"
 
 # Remove obj & exec files
 fclean:						clean
-							$(RM) $(NAME)
+							@$(RM) $(NAME)
+							@printf "${RED}and the Executable file${RST}\n"
 
 # remove all & recompile
 re:							fclean all
 
 # No exceptions
 .PHONY:						all clean fclean re
+
+# color codes
+RED					=		\e[1;31m
+GRN					=		\e[1;32m
+RST					=		\e[0m
